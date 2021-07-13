@@ -4,11 +4,12 @@
  <meta charset="utf-8">
  <title>Japanese Culture</title>
  <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+ <link rel="stylesheet" href="https://use.typekit.net/nhg6avq.css"><!--adobe font-->
  <script src="https://kit.fontawesome.com/cbfa6d7d6b.js" crossorigin="anonymous"></script>
 
  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <link rel="shortcut icon" type="image/x-icon" href="./top.ico" />
+
  <link rel="stylesheet" href="./sample.css">
  <link rel="stylesheet" href="./style.css">
 
@@ -124,63 +125,23 @@
 
  <div id="pagedata"></div>
  <div class="type_div">
-  <h1 class="first_typewrite">
-    Japanese 
-    <span class="typewrite" data-period="2000" data-type='[ "Culture", "Food", "Spot", "Music" ]'></span>
+  <h1 class="first_typewrite" style="padding-right: 10px; text-shadow: 4px 4px 5px #3d3d3d9b; ">
+    Portfolio<p style="font-size:12px; text-align: end;">Yukina Ogasawara<br>birthday:2001.01.09<br>E-mail:s1f101900723.iniad.org<br>E-mail:ogasawara.2001.0109@gmail.com<br>E-mail:ogasawara.2001.0109@gmail.com</p>
+    <!--span class="typewrite" data-period="2000" data-type='[ "PORTFOLIO" ]'></span-->
   </h1>
-</div>
+ </div>
 
  <section class="img2">
-  <div class="btn-circle-1">
-    <label for="label1"><p class="channel_01 title-border" >Food</p></label>
-    <input type="checkbox" id="label1"/>
-    <div class="hidden_show">
-      <!--非表示ここから--> 
-      <div id="food_menu"></div>
-      <!--ここまで-->
-    </div>
-  </div>
-
-    <div class="btn-circle-1">
-      <label for="label2"><p class="channel_01 title-border">Spot</p></label>
-      <input type="checkbox" id="label2"/>
-      <div class="hidden_show">
-        <!--非表示ここから--> 
-        <div id="spot_menu"></div>
-        <!--ここまで-->
-      </div>
-    </div>
-    <div class="btn-circle-1">
-      <label for="label3"><p class="channel_01 title-border" >Music</p></label>
-      <input type="checkbox" id="label3"/>
-      <div class="hidden_show">
-        <!--非表示ここから--> 
-        <div id="music_menu"></div>
-
-        <!--ここまで-->
-      </div>
-    </div>
-    <div class="btn-circle-1">
-      <label for="label4"><p class="channel_01 title-border" >Culture</p></label>
-      <input type="checkbox" id="label4"/>
-      <div class="hidden_show">
-        <!--非表示ここから--> 
-        <div id="culture_menu"></div>
-        <!--ここまで-->
-      </div>
-    </div>
-    <div class="btn-circle-1">
-      <label for="label5"><p class="channel_01 title-border" >Route</p></label>
-      <input type="checkbox" id="label5"/>
-      <div class="hidden_show">
-        <!--非表示ここから--> 
-        <div class="btn train">
-          <a href="https://world.jorudan.co.jp/mln/en/?sub_lang=nosub">Train</a>
-        </div>
-        <div id="route_menu"></div>
-        <!--ここまで-->
-      </div>
-    </div>
+  <span class="btn"><a href=>#Food</a></span>
+  <span id="food_menu"></span>
+  <span class="btn"><a href=>#Food</a></span>
+  <span id="spot_menu"></span>
+  <span class="btn"><a href=>#Food</a></span>
+  <span id="music_menu"></span>
+  <span class="btn"><a href=>#Food</a></span>
+  <span id="culture_menu"></span>
+  <span class="btn"><a href=>#Food</a></span>
+  <span id="route_menu"></span>
  </section>
  </main>
  
@@ -214,13 +175,13 @@ let htmltext_music_top = "";
 let htmltext_culture_top = "";
 let htmltext_route_top = "";
 var firebaseConfig = {
-          apiKey: "AIzaSyCLgalbznAglRwlXdPbMBguALto1xqJz1Q",
-          authDomain: "japanese-culture-293e6.firebaseapp.com",
-          projectId: "japanese-culture-293e6",
-          storageBucket: "japanese-culture-293e6.appspot.com",
-          messagingSenderId: "153847878065",
-          appId: "1:153847878065:web:c11e45da8bba3f99d66d90",
-          measurementId: "G-G3K7ELHBP3"
+          apiKey: "AIzaSyBgLgIQBBDQtUYG-p7LVAKATuFeRS1DV-k",
+          authDomain: "portfolio-bef53.firebaseapp.com",
+          projectId: "portfolio-bef53",
+          storageBucket: "portfolio-bef53.appspot.com",
+          messagingSenderId: "373154460995",
+          appId: "1:373154460995:web:387d1aa177729a01eaabf6",
+          measurementId: "G-8M1D6MCG92"
       };
 
 if (last_url=="index.html"){
@@ -243,31 +204,31 @@ menudoc.get().then((querySnapshot) => {
     console.log(querySnapshot.docs[j].id);
     li_doc = querySnapshot.docs[j].data();
     if(li_doc.type=="Food"){
-      htmltext_food += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img_2[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+      htmltext_food += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_food_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
     if(li_doc.type=="Spot"){
-      htmltext_spot += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img_2[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+      htmltext_spot += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_spot_top += '<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
     if(li_doc.type=="Music"){
-      htmltext_music += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img_2[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+      htmltext_music += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_music_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
     if(li_doc.type=="Culture"){
-      htmltext_culture += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img_2[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+      htmltext_culture += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_culture_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
     if(li_doc.type=="Route"){
-      htmltext_route += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img_2[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+      htmltext_route += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_route_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
     if(querySnapshot.docs[j].id==url){
           var doc1 = querySnapshot.docs[j].data();
           console.log(doc1);
-          for (let i = 0; i < doc1.img_2.length; i++){
+          for (let i = 0; i < doc1.img.length; i++){
             if(i==0){
-              htmltext += '<div class="img3" style="background-image: url(' +doc1.img_2[i] +') ;"><div class="img3_title">'+ doc1.title + '</div></div>';
+              htmltext += '<div class="img3" style="background-image: url(' +doc1.img[i] +') ;"><div class="img3_title">'+ doc1.title + '</div></div>';
 
               console.log(doc1.title);
               if(i>=0 && i < doc1.text.length){
@@ -276,7 +237,7 @@ menudoc.get().then((querySnapshot) => {
               }
             }
             else{
-              htmltext += '<div class="img4"><img src="'+doc1.img_2[i] + '"></div>';
+              htmltext += '<div class="img4"><img src="'+doc1.img[i] + '"></div>';
               if(i>=0 && i < doc1.text.length){
                 htmltext += '<h3 class="div_h3">'+doc1.text[i] + '</h3>';
                 console.log(doc1.text[i]);
@@ -380,7 +341,7 @@ window.onload = function() {
     <script>
     jQuery(function($) {
         $('.bg-slider').bgSwitcher({
-            images: ['./960h/1.jpg','./960h/2.jpg','./960h/3.jpg','./960h/4.jpg','./960h/5.jpg','./960h/6.jpg','./960h/7.jpg','./960h/8.jpg'], // 切り替える背景画像を指定
+            images: ['./photo/ovice.png','./photo/chair_3.png','./photo/ovice.png','./photo/sdgs_1.png','./photo/ovice.png','./photo/ovice.png'], // 切り替える背景画像を指定
         });
     });
 
