@@ -11,12 +11,12 @@
     color: #fff;
   }
   h3.div_h3 {
-    color: #fff;
+    color: #3c3c3ccc;
     width: 80%;
     display: inline-block;
     text-align: center;
     padding-top: 20px;
-    font-size: 1.17em;
+    font-size: 18px;
     font-weight: normal;
   }
 
@@ -54,7 +54,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-
+    padding-right: 10px; 
     text-shadow: 4px 4px 5px #3d3d3d9b;
   }
   .img3_title{

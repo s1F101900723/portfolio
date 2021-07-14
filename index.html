@@ -50,35 +50,35 @@
           <a href="./index.html">Home</a>
         </li>
         <li>
-          <a>Food</a>
+          <a>Illustration</a>
           <span class="touch-btn"><i class="blogicon-chevron-down lg"></i></span>
           <ul class="second-level">
             <div id="food_menu_top"></div>
           </ul>
         </li>
         <li>
-          <a>Spot</a>
+          <a>Web</a>
           <span class="touch-btn"><i class="blogicon-chevron-down lg"></i></span>
           <ul class="second-level">
             <div id="spot_menu_top"></div>
           </ul>
         </li>
         <li>
-          <a>Music</a>
+          <a>App</a>
           <span class="touch-btn"><i class="blogicon-chevron-down lg"></i></span>
           <ul class="second-level">
             <div id="music_menu_top"></div>
           </ul>
         </li>
         <li>
-          <a>Culture</a>
+          <a>Video</a>
           <span class="touch-btn"><i class="blogicon-chevron-down lg"></i></span>
           <ul class="second-level">
             <div id="culture_menu_top"></div>
           </ul>
         </li>
         <li>
-          <a>Route</a>
+          <a>Else</a>
           <span class="touch-btn"><i class="blogicon-chevron-down lg"></i></span>
           <ul class="second-level">
             <li>
@@ -140,7 +140,7 @@
   <span id="music_menu"></span>
   <span class="btn title"><a href=>#Video</a></span>
   <span id="culture_menu"></span>
-  <span class="btn title"><a href=>#Food</a></span>
+  <span class="btn title"><a href=>#Else</a></span>
   <span id="route_menu"></span>
  </section>
  </main>
@@ -219,7 +219,7 @@ menudoc.get().then((querySnapshot) => {
       htmltext_culture += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_culture_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
-    if(li_doc.type=="Route"){
+    if(li_doc.type=="Else"){
       htmltext_route += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_route_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
@@ -341,7 +341,7 @@ window.onload = function() {
     <script>
     jQuery(function($) {
         $('.bg-slider').bgSwitcher({
-            images: ['./photo/ovice.png','./photo/chair_3.png','./photo/ovice.png','./photo/sdgs_1.png','./photo/ovice.png','./photo/ovice.png'], // 切り替える背景画像を指定
+            images: ['./photo/ovice.png','./photo/chair_3.png','./photo/salt_pepper_1.png','./photo/sdgs_1.png','./photo/sdgs_3.png','./photo/chair_2.png'], // 切り替える背景画像を指定
         });
     });
 

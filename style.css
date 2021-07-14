@@ -244,6 +244,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		display: block;
 		position: relative;
 		margin-top: 40px;
+
 	}
 
 	.drawer_menu .drawer_nav li {
@@ -253,12 +254,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		/*  ドロワーメニューリスト項目高さ */
 		position: relative;
 		border-bottom: 1px solid #eee;
+		color: tomato;
 	}
 
 	.drawer_menu .drawer_nav li a {
 		background-color: #fff;
 		/* ドロワーメニューリスト背景色 */
-		color: #673AB7;
+		color: tomato;
 		/* ドロワーメニューリスト文字色 */
 		display: block;
 		text-align: left;
@@ -268,6 +270,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	/* スマートフォン2階層目 */
 	.drawer_menu .drawer_nav li:hover ul.second-level {
 		display: block;
+		
 	}
 
 	.drawer_menu .drawer_nav li ul.second-level {
@@ -305,7 +308,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	}
 
 	.touch-btn {
-		color: #673AB7;
+		color: tomato;
 		position: absolute;
 		top: .25rem;
 		right: 2%;
@@ -324,7 +327,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	width: 100%;
 	height: 50px;
 	line-height: 50px;
-	background-color: #673AB7;
+	background-color: tomato;
 	/* ドロワーメニュー内タイトルライン背景色 */
 	color: #fff;
 }
