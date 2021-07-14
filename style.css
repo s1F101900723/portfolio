@@ -255,6 +255,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		position: relative;
 		border-bottom: 1px solid #eee;
 		color: tomato;
+		
+		font-family: all-round-gothic, sans-serif;
+		font-weight: 500;
+		font-style: normal;
 	}
 
 	.drawer_menu .drawer_nav li a {
