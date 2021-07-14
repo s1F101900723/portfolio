@@ -258,7 +258,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	.drawer_menu .drawer_nav li a {
 		background-color: #fff;
 		/* ドロワーメニューリスト背景色 */
-		color: tomato;
+		color: #673AB7;
 		/* ドロワーメニューリスト文字色 */
 		display: block;
 		text-align: left;
@@ -305,7 +305,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	}
 
 	.touch-btn {
-		color: tomato;
+		color: #673AB7;
 		position: absolute;
 		top: .25rem;
 		right: 2%;
@@ -324,7 +324,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 	width: 100%;
 	height: 50px;
 	line-height: 50px;
-	background-color: tomato;
+	background-color: #673AB7;
 	/* ドロワーメニュー内タイトルライン背景色 */
 	color: #fff;
 }

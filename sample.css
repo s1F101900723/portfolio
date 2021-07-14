@@ -25,7 +25,7 @@
     height: 100vh;
     line-height: 1.3;
 
-    background-color: #ffa697;
+    background-color: #ffffff;
     text-rendering: geometricPrecision;
     -webkit-font-smoothing: antialiased;
     text-align: center;
@@ -54,8 +54,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    background-color:rgba(255, 99, 71, 0.27);
-    background-blend-mode:lighten;
+
+    text-shadow: 4px 4px 5px #3d3d3d9b;
   }
   .img3_title{
     color: #fff;
@@ -75,7 +75,7 @@
   }
   main p .highlight {
     background: white;
-    color: tomato;
+    color: #673AB7;
     font-size: 4vw;
   }
 
@@ -143,9 +143,10 @@
 
 }
 .btn a{
+  
   display:block;
   text-decoration: none;
-  background: #38383881;
+  
   color:#fff;
   text-align:center;
   /*border:5px solid #ffffff;*/
@@ -153,7 +154,8 @@
   font-size:16px;
   font-weight:bold;
   border-radius:3px;
-
+  background-size: contain;
+  background-repeat: no-repeat;
   transition: all 0.5s ease;
 }
 .btn a:hover{
@@ -162,11 +164,37 @@
   margin-top:0px;
   /*border:5px solid #FFFFFF;*/
   box-shadow:none;
+  
+  color:#FFFFFF;
+}
+.title{
+  width:200px;
+}
+.title a{
 
-  background-image: url(./AdobeStock_sushi.jpeg) ;
+  background-color: #38383881;
+  display:block;
+  text-decoration: none;
+  
+  color:#fff;
+  text-align:center;
+  /*border:5px solid #ffffff;*/
+  padding: 50px;
+  font-size:16px;
+  font-weight:bold;
+  border-radius:3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
+
+}
+.title a:hover{
+
+  margin-left:0px;
+  margin-top:0px;
+  /*border:5px solid #FFFFFF;*/
+  box-shadow:none;
   background-color:rgba(255, 99, 71, 0.6);
-  background-blend-mode:lighten;
-  background-size: cover;
   color:#FFFFFF;
 }
 
@@ -174,7 +202,7 @@
 
   background-image: url(https://free-materials.com/adm/wp-content/uploads/2019/01/adpDSC_2632-750x500.jpg) ;
   background-color:rgba(255, 99, 71, 0.6);
-  background-blend-mode:lighten;
+  background-blend-mode:overlay;
 }
 
 

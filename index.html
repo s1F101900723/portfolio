@@ -126,21 +126,21 @@
  <div id="pagedata"></div>
  <div class="type_div">
   <h1 class="first_typewrite" style="padding-right: 10px; text-shadow: 4px 4px 5px #3d3d3d9b; ">
-    Portfolio<p style="font-size:12px; text-align: end;">Yukina Ogasawara<br>birthday:2001.01.09<br>E-mail:s1f101900723.iniad.org<br>E-mail:ogasawara.2001.0109@gmail.com<br>E-mail:ogasawara.2001.0109@gmail.com</p>
+    Portfolio<p style="font-size:12px; text-align: end; text-shadow:none;">Yukina Ogasawara<br>birthdate:2001.01.09<br>E-mail:s1f101900723.iniad.org<br></p>
     <!--span class="typewrite" data-period="2000" data-type='[ "PORTFOLIO" ]'></span-->
   </h1>
  </div>
 
  <section class="img2">
-  <span class="btn"><a href=>#Food</a></span>
+  <span class="btn title"><a href= >#Illustration</a></span>
   <span id="food_menu"></span>
-  <span class="btn"><a href=>#Food</a></span>
+  <span class="btn title"><a href=>#Web</a></span>
   <span id="spot_menu"></span>
-  <span class="btn"><a href=>#Food</a></span>
+  <span class="btn title"><a href=>#App</a></span>
   <span id="music_menu"></span>
-  <span class="btn"><a href=>#Food</a></span>
+  <span class="btn title"><a href=>#Video</a></span>
   <span id="culture_menu"></span>
-  <span class="btn"><a href=>#Food</a></span>
+  <span class="btn title"><a href=>#Food</a></span>
   <span id="route_menu"></span>
  </section>
  </main>
@@ -203,24 +203,24 @@ menudoc.get().then((querySnapshot) => {
   for (var j=0; j<querySnapshot.docs.length; j++){
     console.log(querySnapshot.docs[j].id);
     li_doc = querySnapshot.docs[j].data();
-    if(li_doc.type=="Food"){
-      htmltext_food += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+    if(li_doc.type=="Illustration"){
+      htmltext_food += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center; background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_food_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
-    if(li_doc.type=="Spot"){
-      htmltext_spot += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+    if(li_doc.type=="Web"){
+      htmltext_spot += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_spot_top += '<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
-    if(li_doc.type=="Music"){
-      htmltext_music += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+    if(li_doc.type=="App"){
+      htmltext_music += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_music_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
-    if(li_doc.type=="Culture"){
-      htmltext_culture += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+    if(li_doc.type=="Video"){
+      htmltext_culture += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_culture_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
     if(li_doc.type=="Route"){
-      htmltext_route += '<style>.'+querySnapshot.docs[j].id+ ' a:hover{background-image: url('+li_doc.img[0]+') ;background-color:rgba(255, 99, 71, 0.6);background-blend-mode:lighten;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+      htmltext_route += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
       htmltext_route_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
     }
     if(querySnapshot.docs[j].id==url){
