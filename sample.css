@@ -36,12 +36,13 @@
     font-style: normal;
 
   }
+
   img{
     width: 70%;
     padding-top: 20px;
   }
   .img2{
-    padding-top: 1ch;
+    padding-top: 1.375rem;
     width: 100%;
     background-color: #ffffff;
     line-height: 1.3;

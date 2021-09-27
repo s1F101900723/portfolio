@@ -131,7 +131,7 @@
   </h1>
  </div>
 
- <section class="img2">
+ <section class="img2" style="font-size:0;">
   <span class="btn title"><a href= >#Illustration</a></span>
   <span id="food_menu"></span>
   <span class="btn title"><a href=>#Web</a></span>
@@ -155,197 +155,192 @@
  <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
-    <script>
+  <script>
 
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-var str=location.href;
-var url = location.search.substring(4);
-let result = str.split("/").filter(e => Boolean(e));
-let last_url=result[result.length - 1];
-let htmltext = "";
-let htmltext_food = "";
-let htmltext_spot = "";
-let htmltext_music = "";
-let htmltext_culture = "";
-let htmltext_route = "";
-let htmltext_food_top = "";
-let htmltext_spot_top = "";
-let htmltext_music_top = "";
-let htmltext_culture_top = "";
-let htmltext_route_top = "";
-var firebaseConfig = {
-          apiKey: "AIzaSyBgLgIQBBDQtUYG-p7LVAKATuFeRS1DV-k",
-          authDomain: "portfolio-bef53.firebaseapp.com",
-          projectId: "portfolio-bef53",
-          storageBucket: "portfolio-bef53.appspot.com",
-          messagingSenderId: "373154460995",
-          appId: "1:373154460995:web:387d1aa177729a01eaabf6",
-          measurementId: "G-8M1D6MCG92"
-      };
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var str=location.href;
+    var url = location.search.substring(4);
+    let result = str.split("/").filter(e => Boolean(e));
+    let last_url=result[result.length - 1];
+    let htmltext = "";
+    let htmltext_food = "";
+    let htmltext_spot = "";
+    let htmltext_music = "";
+    let htmltext_culture = "";
+    let htmltext_route = "";
+    let htmltext_food_top = "";
+    let htmltext_spot_top = "";
+    let htmltext_music_top = "";
+    let htmltext_culture_top = "";
+    let htmltext_route_top = "";
+    var firebaseConfig = {
+              apiKey: "AIzaSyBgLgIQBBDQtUYG-p7LVAKATuFeRS1DV-k",
+              authDomain: "portfolio-bef53.firebaseapp.com",
+              projectId: "portfolio-bef53",
+              storageBucket: "portfolio-bef53.appspot.com",
+              messagingSenderId: "373154460995",
+              appId: "1:373154460995:web:387d1aa177729a01eaabf6",
+              measurementId: "G-8M1D6MCG92"
+          };
 
-if (last_url=="index.html"){
-  console.log(last_url);
-  //htmltext += '<div class="bg-slider"><h1 class="bg-slider_title">Japanese Culture</h1></div>';
-  htmltext += '<div class="bg-slider"></div>';
-  document.getElementById("pagedata").innerHTML = htmltext;
-}
-
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-var db = firebase.firestore();
-var menudoc= db.collection("pages");
-
-
-
-menudoc.get().then((querySnapshot) => {
-  console.log(querySnapshot.docs.length);
-  for (var j=0; j<querySnapshot.docs.length; j++){
-    console.log(querySnapshot.docs[j].id);
-    li_doc = querySnapshot.docs[j].data();
-    if(li_doc.type=="Illustration"){
-      htmltext_food += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center; background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
-      htmltext_food_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
+    if (last_url=="index.html"){
+      console.log(last_url);
+      //htmltext += '<div class="bg-slider"><h1 class="bg-slider_title">Japanese Culture</h1></div>';
+      htmltext += '<div class="bg-slider"></div>';
+      document.getElementById("pagedata").innerHTML = htmltext;
     }
-    if(li_doc.type=="Web"){
-      htmltext_spot += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
-      htmltext_spot_top += '<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
-    }
-    if(li_doc.type=="App"){
-      htmltext_music += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
-      htmltext_music_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
-    }
-    if(li_doc.type=="Video"){
-      htmltext_culture += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
-      htmltext_culture_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
-    }
-    if(li_doc.type=="Else"){
-      htmltext_route += '<style>.'+querySnapshot.docs[j].id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ querySnapshot.docs[j].id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
-      htmltext_route_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
-    }
-    if(querySnapshot.docs[j].id==url){
-          var doc1 = querySnapshot.docs[j].data();
-          console.log(doc1);
-          for (let i = 0; i < doc1.img.length; i++){
-            if(i==0){
-              htmltext += '<div class="img3" style="background-image: url(' +doc1.img[i] +') ;"><div class="img3_title">'+ doc1.title + '</div></div>';
 
-              console.log(doc1.title);
-              if(i>=0 && i < doc1.text.length){
-                htmltext += '<h3 class="div_h3">'+doc1.text[i] + '</h3>';
-                console.log(doc1.text[i]);
-              }
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    var db = firebase.firestore();
+    var menudoc= db.collection("pages");
+
+    db.collection("pages").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots
+            
+            li_doc=doc.data();
+            console.log(doc.id, " => ", li_doc,li_doc.type,);
+            if(li_doc.type=="Illustration"){
+              htmltext_food += '<style>.'+doc.id+ ' a{background-position: center; background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+              htmltext_food_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
             }
-            else{
-              htmltext += '<div class="img4"><img src="'+doc1.img[i] + '"></div>';
-              if(i>=0 && i < doc1.text.length){
-                htmltext += '<h3 class="div_h3">'+doc1.text[i] + '</h3>';
-                console.log(doc1.text[i]);
-                }
+            if(li_doc.type=="Web"){
+              htmltext_spot += '<style>.'+doc.id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+              htmltext_spot_top += '<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
             }
-          }
-        console.log(last_url);
-        document.getElementById("pagedata").innerHTML = htmltext;
-    }
-    document.getElementById("food_menu").innerHTML = htmltext_food;
-    document.getElementById("spot_menu").innerHTML = htmltext_spot;
-    document.getElementById("music_menu").innerHTML = htmltext_music;
-    document.getElementById("culture_menu").innerHTML = htmltext_culture;
-    document.getElementById("route_menu").innerHTML = htmltext_route;
-    document.getElementById("food_menu_top").innerHTML = htmltext_food_top;
-    document.getElementById("spot_menu_top").innerHTML = htmltext_spot_top;
-    document.getElementById("music_menu_top").innerHTML = htmltext_music_top;
-    document.getElementById("culture_menu_top").innerHTML = htmltext_culture_top;
-    document.getElementById("route_menu_top").innerHTML = htmltext_route_top;
-    
-  }
-})
-.catch((error) => {
-    console.log("Error getting documents: ", error);
-});
+            if(li_doc.type=="App"){
+              htmltext_music += '<style>.'+doc.id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+              htmltext_music_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
+            }
+            if(li_doc.type=="Video"){
+              htmltext_culture += '<style>.'+doc.id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+              htmltext_culture_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
+            }
+            if(li_doc.type=="Else"){
+              htmltext_route += '<style>.'+doc.id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+              htmltext_route_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
+            }
+            if(doc.id==url){
+                  var doc1 = li_doc;
+                  console.log(doc1);
+                  for (let i = 0; i < doc1.img.length; i++){
+                    if(i==0){
+                      htmltext += '<div class="img3" style="background-image: url(' +doc1.img[i] +') ;"><div class="img3_title">'+ doc1.title + '</div></div>';
 
-document.getElementById("pagedata").innerHTML = htmltext;
+                      console.log(doc1.title);
+                      if(i>=0 && i < doc1.text.length){
+                        htmltext += '<h3 class="div_h3">'+doc1.text[i] + '</h3>';
+                        console.log(doc1.text[i]);
+                      }
+                    }
+                    else{
+                      htmltext += '<div class="img4"><img src="'+doc1.img[i] + '"></div>';
+                      if(i>=0 && i < doc1.text.length){
+                        htmltext += '<h3 class="div_h3">'+doc1.text[i] + '</h3>';
+                        console.log(doc1.text[i]);
+                        }
+                    }
+                  }
+                console.log(last_url);
+                document.getElementById("pagedata").innerHTML = htmltext;
+            }
+        });
+        document.getElementById("food_menu").innerHTML = htmltext_food;
+        document.getElementById("spot_menu").innerHTML = htmltext_spot;
+        document.getElementById("music_menu").innerHTML = htmltext_music;
+        document.getElementById("culture_menu").innerHTML = htmltext_culture;
+        document.getElementById("route_menu").innerHTML = htmltext_route;
+        document.getElementById("food_menu_top").innerHTML = htmltext_food_top;
+        document.getElementById("spot_menu_top").innerHTML = htmltext_spot_top;
+        document.getElementById("music_menu_top").innerHTML = htmltext_music_top;
+        document.getElementById("culture_menu_top").innerHTML = htmltext_culture_top;
+        document.getElementById("route_menu_top").innerHTML = htmltext_route_top;
+    });
+
+    document.getElementById("pagedata").innerHTML = htmltext;
 
 
 
 
-  var TxtType = function(el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 2000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-};
+      var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
 
-TxtType.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
 
-    if (this.isDeleting) {
-    this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-    this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-    var that = this;
-    var delta = 200 - Math.random() * 100;
-
-    if (this.isDeleting) { delta /= 2; }
-
-    if (!this.isDeleting && this.txt === fullTxt) {
-    delta = this.period;
-    this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-    this.isDeleting = false;
-    this.loopNum++;
-    delta = 500;
-    }
-
-    setTimeout(function() {
-    that.tick();
-    }, delta);
-};
-
-window.onload = function() {
-    if(last_url=="index.html"){
-    var elements = document.getElementsByClassName('typewrite');
-    for (var i=0; i<elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-type');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-          new TxtType(elements[i], JSON.parse(toRotate), period);
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
         }
-    }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-    document.body.appendChild(css);
-    }
-    else{
-      var css = document.createElement("style");
-      css.type = "text/css";
-      css.innerHTML = ".first_typewrite{display:none;}";
-      document.body.appendChild(css);
-    }
-};
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        if(last_url=="index.html"){
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+        }
+        else{
+          var css = document.createElement("style");
+          css.type = "text/css";
+          css.innerHTML = ".first_typewrite{display:none;}";
+          document.body.appendChild(css);
+        }
+    };
 
       
-    </script>
+  </script>
 
-    <script src="./jquery.bgswitcher.js"></script>
-    <script>
+  <script src="./jquery.bgswitcher.js"></script>
+  <script>
     jQuery(function($) {
         $('.bg-slider').bgSwitcher({
             images: ['./photo/ovice.png','./photo/chair_3.png','./photo/salt_pepper_1.png','./photo/sdgs_1.png','./photo/sdgs_3.png','./photo/chair_2.png'], // 切り替える背景画像を指定
         });
     });
 
-    </script>
+  </script>
 
 
  </body>
