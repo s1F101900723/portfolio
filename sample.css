@@ -37,8 +37,19 @@
 
   }
 
+  .img4{
+
+  }
   img{
     width: 70%;
+    max-width: 400px;
+
+    padding-top: 20px;
+  }
+  video{
+    width: 70%;
+    max-width: 400px;
+
     padding-top: 20px;
   }
   .img2{
@@ -155,7 +166,7 @@
   color:#fff;
   text-align:center;
   /*border:5px solid #ffffff;*/
-  padding: 50px;
+  padding: 50px 0px;
   font-size:16px;
   font-weight:bold;
   border-radius:3px;
@@ -184,7 +195,7 @@
   color:#fff;
   text-align:center;
   /*border:5px solid #ffffff;*/
-  padding: 50px;
+  padding: 50px 0px;
   font-size:16px;
   font-weight:bold;
   border-radius:3px;

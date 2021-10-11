@@ -50,6 +50,13 @@
           <a href="./index.html">Home</a>
         </li>
         <li>
+          <a>Programming</a>
+          <span class="touch-btn"><i class="blogicon-chevron-down lg"></i></span>
+          <ul class="second-level">
+            <div id="culture_menu_top"></div>
+          </ul>
+        </li>
+        <li>
           <a>Illustration</a>
           <span class="touch-btn"><i class="blogicon-chevron-down lg"></i></span>
           <ul class="second-level">
@@ -68,13 +75,6 @@
           <span class="touch-btn"><i class="blogicon-chevron-down lg"></i></span>
           <ul class="second-level">
             <div id="music_menu_top"></div>
-          </ul>
-        </li>
-        <li>
-          <a>Video</a>
-          <span class="touch-btn"><i class="blogicon-chevron-down lg"></i></span>
-          <ul class="second-level">
-            <div id="culture_menu_top"></div>
           </ul>
         </li>
         <li>
@@ -132,14 +132,14 @@
  </div>
 
  <section class="img2" style="font-size:0;">
+  <span class="btn title"><a href=>#Programming</a></span>
+  <span id="culture_menu"></span>
   <span class="btn title"><a href= >#Illustration</a></span>
   <span id="food_menu"></span>
   <span class="btn title"><a href=>#Web</a></span>
   <span id="spot_menu"></span>
   <span class="btn title"><a href=>#App</a></span>
   <span id="music_menu"></span>
-  <span class="btn title"><a href=>#Video</a></span>
-  <span id="culture_menu"></span>
   <span class="btn title"><a href=>#Else</a></span>
   <span id="route_menu"></span>
  </section>
@@ -214,7 +214,7 @@
               htmltext_music += '<style>.'+doc.id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
               htmltext_music_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
             }
-            if(li_doc.type=="Video"){
+            if(li_doc.type=="Programming"){
               htmltext_culture += '<style>.'+doc.id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
               htmltext_culture_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
             }
@@ -225,7 +225,9 @@
             if(doc.id==url){
                   var doc1 = li_doc;
                   console.log(doc1);
+                  
                   for (let i = 0; i < doc1.img.length; i++){
+                    console.log(doc1.img[i].split('.').pop())
                     if(i==0){
                       htmltext += '<div class="img3" style="background-image: url(' +doc1.img[i] +') ;"><div class="img3_title">'+ doc1.title + '</div></div>';
 
@@ -234,6 +236,13 @@
                         htmltext += '<h3 class="div_h3">'+doc1.text[i] + '</h3>';
                         console.log(doc1.text[i]);
                       }
+                    }
+                    else if(doc1.img[i].split('.').pop()=="mp4"){
+                      htmltext += '<div class="img4"><video src="'+doc1.img[i] + '" controls></video></div>';
+                      if(i>=0 && i < doc1.text.length){
+                        htmltext += '<h3 class="div_h3">'+doc1.text[i] + '</h3>';
+                        console.log(doc1.text[i]);
+                        }
                     }
                     else{
                       htmltext += '<div class="img4"><img src="'+doc1.img[i] + '"></div>';
