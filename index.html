@@ -229,8 +229,9 @@
                   for (let i = 0; i < doc1.img.length; i++){
                     console.log(doc1.img[i].split('.').pop())
                     if(i==0){
-                      htmltext += '<div class="img3" style="background-image: url(' +doc1.img[i] +') ;"><div class="img3_title">'+ doc1.title + '</div></div>';
-
+                      htmltext += '<div class="img3" style="background-image: url(' +doc1.back +') ;"><div class="img3_title">'+ doc1.title + '</div></div>';
+                      //htmltext += '<div class="img3" style="background-image: url(' +doc1.img[i] +') ;"><div class="img3_title">'+ doc1.title + '</div></div>';
+                      //htmltext += '<div class="img3" style="background-color: #38383881 ;"><div class="img3_title">'+ doc1.title + '</div></div>';
                       console.log(doc1.title);
                       if(i>=0 && i < doc1.text.length){
                         htmltext += '<h3 class="div_h3">'+doc1.text[i] + '</h3>';
