@@ -203,23 +203,23 @@
             li_doc=doc.data();
             console.log(doc.id, " => ", li_doc,li_doc.type,);
             if(li_doc.type=="Illustration"){
-              htmltext_food += '<style>.'+doc.id+ ' a{background-position: center; background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+              htmltext_food += '<style>.'+doc.id+ ' a{background-color:#38383830; background-position: center; background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;background-color: transparent;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
               htmltext_food_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
             }
             if(li_doc.type=="Web"){
-              htmltext_spot += '<style>.'+doc.id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+              htmltext_spot += '<style>.'+doc.id+ ' a{background-color:#38383830; background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
               htmltext_spot_top += '<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
             }
             if(li_doc.type=="App"){
-              htmltext_music += '<style>.'+doc.id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+              htmltext_music += '<style>.'+doc.id+ ' a{background-color:#38383830; background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
               htmltext_music_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
             }
             if(li_doc.type=="Programming"){
-              htmltext_culture += '<style>.'+doc.id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+              htmltext_culture += '<style>.'+doc.id+ ' a{background-color:#38383830; background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
               htmltext_culture_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
             }
             if(li_doc.type=="Else"){
-              htmltext_route += '<style>.'+doc.id+ ' a{background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
+              htmltext_route += '<style>.'+doc.id+ ' a{background-color:#38383830; background-position: center;background-image: url('+li_doc.img[0]+') ;} a:hover{background-color:#38383881;background-blend-mode:overlay;}</style>'+'<div class="btn '+ doc.id +'"><a href='+ li_doc.li_url +'>'+li_doc.title+'</a></div>';
               htmltext_route_top +='<li><a href="'+li_doc.li_url+'">'+li_doc.title+'</a></li>';
             }
             if(doc.id==url){
