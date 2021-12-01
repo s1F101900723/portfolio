@@ -307,6 +307,7 @@
         color: #666; /* 文字色 */
         background-color: #f7f7f7; /* 背景色 */
         border: 1px solid #ccc; /* 枠線 */
+        display: none;
 
     }
     .sourceview h3{
