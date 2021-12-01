@@ -1,0 +1,316 @@
+
+  
+  * { color:#fff; text-decoration: none;}
+
+
+
+  section {
+    /*background: #faebab;*/
+  }
+  h1{
+    color: #fff;
+  }
+  h3.div_h3 {
+    color: #3c3c3ccc;
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  body {
+    /*font-family: "Roboto", "Arial",sans-serif;*/
+    height: 100vh;
+    line-height: 1.3;
+
+    background-color: #ffffff;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    color:#fff;
+
+    font-family: all-round-gothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+  }
+
+  .img4{
+
+  }
+  img{
+    width: 70%;
+    max-width: 400px;
+
+    padding-top: 20px;
+  }
+  video{
+    width: 70%;
+    max-width: 400px;
+
+    padding-top: 20px;
+  }
+  .img2{
+    padding-top: 1.375rem;
+    width: 100%;
+    background-color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding: 1.375rem 40px;
+
+  }
+  .img3{
+    width: 100%;
+    height: 320px;
+    background-position:center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-right: 10px; 
+    text-shadow: 4px 4px 5px #3d3d3d9b;
+  }
+  .img3_title{
+    color: #fff;
+    font-size: 48px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align:center;
+    font-family: sans-serif;
+    
+  }
+
+
+  main p {
+    color: white;
+    font-size: 4vw;
+    font-weight: 300;
+  }
+  main p .highlight {
+    background: white;
+    color: #673AB7;
+    font-size: 4vw;
+  }
+
+  .bg-slider {
+    width: 100%;
+    height: 320px;
+    background-position:center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .bg-slider_title{
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    text-align:center;
+  }
+  .first_typewrite{
+    position: relative;
+    color: #fff;
+    font-size: 48px;
+    height: 160px;
+    margin-left: 40px;
+  }
+    .type_div a{
+    width: 0px;
+    color: tomato;
+    top: -16px;
+    left: -16px;
+    text-decoration: none;
+    background-position:center center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+
+  }
+  .type_div p{
+    color: tomato;
+    display: flex;
+    text-align: start;
+    margin: 0;
+    margin-left: 50px;
+  }
+  @media screen and (max-width:450px) {
+    .first_typewrite {
+      font-size: 36px;
+    }
+  }
+  @media screen and (max-width:450px) {
+    .img3_title {
+      font-size: 36px;
+
+    }
+  }
+
+
+
+
+
+.btn{
+  width:200px;
+
+  /*font-family: 'HGP行書体',cursive;*/
+
+}
+.btn a{
+  
+  display:block;
+  text-decoration: none;
+  
+  color:#fff;
+  text-align:center;
+  /*border:5px solid #ffffff;*/
+  padding: 50px 0px;
+  font-size:16px;
+  font-weight:bold;
+  border-radius:3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
+}
+.btn a:hover{
+
+  margin-left:0px;
+  margin-top:0px;
+  /*border:5px solid #FFFFFF;*/
+  box-shadow:none;
+  
+  color:#FFFFFF;
+}
+.title{
+  width:200px;
+}
+.title a{
+
+  background-color: #38383881;
+  display:block;
+  text-decoration: none;
+  
+  color:#fff;
+  text-align:center;
+  /*border:5px solid #ffffff;*/
+  padding: 50px 0px;
+  font-size:16px;
+  font-weight:bold;
+  border-radius:3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.5s ease;
+
+}
+.title a:hover{
+
+  margin-left:0px;
+  margin-top:0px;
+  /*border:5px solid #FFFFFF;*/
+  box-shadow:none;
+  background-color:rgba(255, 99, 71, 0.6);
+  color:#FFFFFF;
+}
+
+.train a:hover{
+
+  background-image: url(https://free-materials.com/adm/wp-content/uploads/2019/01/adpDSC_2632-750x500.jpg) ;
+  background-color:rgba(255, 99, 71, 0.6);
+  background-blend-mode:overlay;
+}
+
+
+
+
+
+  .channel_01{
+
+    font-size:24px;
+    font-weight:bold;
+    padding-top: 10px;
+    /*font-family: 'HGP行書体',cursive;*/
+  
+  
+  
+  }
+  
+    .hidden_show{
+      background-color: rgb(255, 166, 151);
+  
+    }
+
+    .btn-circle-1 label {
+      display: inline-block;
+      text-decoration: none;
+      width: 100%;
+      text-align: center;
+      border-radius:10px;
+      transition: 0.5s;
+      cursor :pointer;
+
+  
+    }
+    
+
+    .btn-circle-1 input {
+      display: none;
+    }
+    .btn-circle-1 .hidden_show {
+      height: 0;
+      padding: 0;
+      overflow: hidden;
+      opacity: 0;
+      -webkit-transition: max-height 0.5s;
+      transition: max-height 0.5s;
+  }
+  
+  /*クリックで中身表示*/
+  .btn-circle-1 input:checked ~ .hidden_show {
+  
+      height: auto;
+      opacity: 1;
+  }
+  
+
+  .title-border {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    }
+    .title-border:before,
+    .title-border:after {
+    border-top: 2px solid;
+    content: "";
+    flex-grow: 1;
+    }
+    .title-border:before {
+    margin-right: 1rem;
+    }
+    .title-border:after {
+    margin-left: 1rem;
+
+    }
+    .title-border:hover{
+      color: #ff6347;
+    }
+    pre{
+        text-align: left;
+        margin: 2em auto;
+        padding: 1em;
+        width: 90%;
+        color: #666; /* 文字色 */
+        background-color: #f7f7f7; /* 背景色 */
+        border: 1px solid #ccc; /* 枠線 */
+
+    }
+    .sourceview h3{
+        color: tomato;
+        margin: 0;
+    }
+    
