@@ -146,6 +146,27 @@
   <span class="btn title"><a href=>#Else</a></span>
   <span id="route_menu"></span>
  </section>
+ <div id="profile_content" style="display: none;">
+  <div class="type_div_1">
+    <div class="first_typewrite_1">
+      <a href="./indexB.html" style="transform: rotate(90deg);">Profile</a>
+      <p style="font-size:24px;">Yukina Ogasawara</p>
+      <p style="font-size:8px;">birthdate:2001.01.09<br>Toyo University / INIAD<br>E-mail:s1f101900723.iniad.org</p>
+    </div>
+    
+    <div class="profile">
+      <p>跡見学園高等学校 卒業 2019.3</p>
+      <p>東洋大学情報連携学部情報連携学科 入学 2019.4</p>
+      <p>
+        <br>
+        実用英語技能検定 2 級<br>
+        普通自動車第一種免許<br>
+        TOEIC Listening & Reading Test（IP テスト）690 点<br>
+        韓国語能力試験 TOPIKⅡ 4 級
+      </p>
+    </div>
+  </div>
+</div>
  </main>
  
 
@@ -187,7 +208,10 @@
               measurementId: "G-8M1D6MCG92"
           };
 
-
+    if (last_url=="indexB.html"){
+      console.log(last_url);
+      document.getElementById("profile_content").style.display = "block";
+    }
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
     var db = firebase.firestore();
