@@ -353,4 +353,11 @@
         color: tomato;
         margin: 0;
     }
-    
+    div.iframe_box{
+      width: 100%;
+      height: 360px;
+    }
+    iframe{
+      width: 100%;
+      height: 100%;
+    }
