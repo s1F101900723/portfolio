@@ -116,6 +116,7 @@
       $(this).next().slideToggle();
     });
   })
+
   </script>
   
 <main>
@@ -123,32 +124,32 @@
  
  <div class="type_div">
   <div class="first_typewrite">
-   <a href="./indexB.html" style="transform: rotate(-90deg);">Portfolio</a>
+   <a class="topic_title" href="./indexB.html" style="transform: rotate(-90deg);">Portfolio</a>
    <p style="font-size:24px;" id="content_title">Yukina Ogasawara</p>
-   <p style="font-size:8px;" id="content_text">birthdate:2001.01.09<br>Toyo University / INIAD<br>E-mail:s1f101900723.iniad.org</p>
+   <p style="font-size:8px;" id="content_text">birthdate : 2001.01.09<br>Toyo University / INIAD<br>E-mail : s1f101900723.iniad.org</p>
   </div>
    <!--span class="typewrite" data-period="2000" data-type='[ "PORTFOLIO" ]'></span-->
 </div>
 
 <div id="pagedata"></div>
  <section class="img2" style="font-size:0;">
-  <span class="btn title"><a href=>#Programming</a></span>
+  <span class="btn title"><a onclick="show_category('culture_menu'); return false;" href="">#Programming</a></span>
   <span id="culture_menu"></span>
-  <span class="btn title"><a href= >#Illustration</a></span>
+  <span class="btn title"><a onclick="show_category('food_menu'); return false;" href="">#Illustration</a></span>
   <span id="food_menu"></span>
-  <span class="btn title"><a href=>#Web</a></span>
+  <span class="btn title"><a onclick="show_category('spot_menu'); return false;" href="">#Web</a></span>
   <span id="spot_menu"></span>
-  <span class="btn title"><a href=>#App</a></span>
+  <span class="btn title"><a onclick="show_category('music_menu'); return false;" href="">#App</a></span>
   <span id="music_menu"></span>
-  <span class="btn title"><a href=>#Else</a></span>
+  <span class="btn title"><a  onclick="show_category('route_menu'); return false;" href="">#Else</a></span>
   <span id="route_menu"></span>
  </section>
  <div id="profile_content" style="display: none;">
   <div class="type_div_1">
     <div class="first_typewrite_1">
-      <a href="./indexB.html" style="transform: rotate(90deg);">Profile</a>
+      <a class="topic_title_1" href="./indexB.html" style="transform: rotate(90deg);">Profile</a>
       <p style="font-size:24px;">Yukina Ogasawara</p>
-      <p style="font-size:8px;">birthdate:2001.01.09<br>Toyo University / INIAD<br>E-mail:s1f101900723.iniad.org<br>GitHub:https://github.com/s1F101900723</p>
+      <p style="font-size:8px;">birthdate : 2001.01.09<br>Toyo University / INIAD<br>E-mail : s1f101900723.iniad.org<br><a href="https://github.com/s1F101900723">GitHub : https://github.com/s1F101900723</a></p>
     </div>
     
     <div class="profile">
@@ -297,7 +298,29 @@
         target1[num].style.display = "block";
       }
     }
-      
+    if (last_url=="indexB.html"){
+      document.getElementById("culture_menu").style.display = "inline";
+      document.getElementById("food_menu").style.display = "inline";
+      document.getElementById("spot_menu").style.display = "inline";
+      document.getElementById("music_menu").style.display = "inline";
+      document.getElementById("route_menu").style.display = "inline";
+    }
+    else{
+      document.getElementById("culture_menu").style.display = "none";
+      document.getElementById("food_menu").style.display = "none";
+      document.getElementById("spot_menu").style.display = "none";
+      document.getElementById("music_menu").style.display = "none";
+      document.getElementById("route_menu").style.display = "none";
+    }
+    function show_category(category){
+      var elem = document.getElementById(category);
+      if (elem.style.display == "none"){
+        elem.style.display = "inline";
+      }
+      else{
+        elem.style.display = "none";
+      }
+    }
   </script>
 
 
