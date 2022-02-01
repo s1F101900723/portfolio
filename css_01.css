@@ -435,3 +435,131 @@ div.snowman span:nth-child(9){
   
 
 /*↑cheese*/
+
+div.french_fries {
+    font-size:0;
+    width: 70%;
+    height: 300px;
+    max-width: 400px;
+    position: relative;
+    margin: 10px auto;
+    overflow: hidden;
+  }
+  div.french_fries_box {
+    background:#ffff00;
+    font-size:0;
+    height: 280px;
+    position: relative;
+    transform: scale(1.5);
+  }
+  div.french_fries div.box {
+    width: 72px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  div.french_fries div.potato{
+    width: 72px;
+    height: 50px;
+    overflow:hidden;
+    border-radius: 50px/15px;
+    position: absolute;
+    z-index:3;
+  }
+  div.french_fries div.box div:nth-child(1){
+    top:10px;
+    left:2px;
+    position: absolute;
+  }
+  div.french_fries div.box div:nth-child(2){
+    top:15px;
+    left:8px;
+    position: absolute;
+  }
+  div.french_fries div.box div:nth-child(3){
+    top:20px;
+    left:0px;
+    position: absolute;
+  }
+  div.french_fries div.potato span{
+    display: inline-block;
+    width: 10px;
+    height: 50px;
+    background: linear-gradient(90deg, #F3B530 60%, #CF8526 40%);
+    margin:0 3px;
+  }
+  
+  div.french_fries div.potato span:nth-child(1){
+    transform: rotate(-7deg);
+  }
+  div.french_fries div.potato span:nth-child(4){
+    transform: rotate(5deg);
+  }
+  div.french_fries div.cup span:nth-child(1){
+    top:25px;
+    left: -6px;
+    width: 72px;
+    height: 25px;
+    background:#ffffff;
+    position: absolute;
+    border-radius: 50px/ 15px;
+    z-index:2;
+  }
+  div.french_fries div.cup span:nth-child(2){
+    top:40.5px;
+    left: -6px;
+    width: 72px;
+    height: 60px;
+    background:#D73A33;
+    position: absolute;
+    border-radius: -5px;
+  }
+  div.french_fries div.cup span:nth-child(3){
+    bottom:-114.5px;
+    width: 60px;
+    height: 20px;
+    background:#ffff00;
+    position: absolute;
+    border-radius: 50px/ 10px;
+    z-index:2;
+  }
+  div.french_fries div.cup span:nth-child(4){
+    bottom:-101px;
+    left:-8px;
+    width: 10px;
+    height: 80px;
+    background:linear-gradient(to left bottom, transparent 50%, #ffff00 50%);
+    position: absolute;
+    z-index:2;
+  }
+  div.french_fries div.cup span:nth-child(5){
+    bottom:-101px;
+    left: 58px;
+    width: 10px;
+    height: 80px;
+    background:linear-gradient(to right bottom, transparent 50%, #ffff00 50%);
+    position: absolute;
+    z-index:2;
+  }
+  div.french_fries div.cup span:nth-child(6){
+    bottom:-101px;
+    left: -6px;
+    width: 36px;
+    height: 65px;
+    background:linear-gradient(85deg , 	#D73A33 30% ,#DC614F 30% 60%,transparent 60%);
+    position: absolute;
+  }
+  div.cup span:nth-child(7){
+    bottom:-101px;
+    left: 30px;
+    width: 36px;
+    height: 65px;
+    background:linear-gradient(-85deg ,  #A22624 60%,transparent 40%);
+    position: absolute;
+  }
+
+
+
+/*french_fries*/
