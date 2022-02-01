@@ -151,3 +151,287 @@ div.snowman span:nth-child(9){
 
   /*↑candle*/
 
+
+  div.present{
+	background: #ac474b;
+    width: 70%;
+    height: 300px;
+    max-width: 400px;
+    position: relative;
+    margin: 10px auto;
+  }
+  div.present div {
+    width: 140px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  div.present span{
+    display:block;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+  }
+  div.present span:nth-child(1){
+    left: 55px;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 20px 20px 0px 20px;
+  }
+  div.present span:nth-child(2){
+    left: 85px;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 20px 20px 20px 0px;
+  }
+  div.present span:nth-child(3){
+    left: 55px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: #ac474b;
+    border-radius: 20px 20px 0px 20px;
+  }
+  div.present span:nth-child(4){
+    left: 85px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: #ac474b;
+    border-radius: 20px 20px 20px 0px;
+  }
+  div.present span:nth-child(5){
+    bottom:0;
+    width: 140px;
+    height: 140px;
+    background: #ffffff;
+  }
+  div.present span:nth-child(6){
+    bottom:0;
+    width: 20px;
+    height: 140px;
+    background: #ac474b;
+  }
+  div.present span:nth-child(7){
+    bottom:60px;
+    width: 140px;
+    height: 20px;
+    background: #ac474b;
+  }
+
+
+  /*↑presenr*/
+
+
+
+
+  div.pokeball {
+    background: #6cb3a9;
+    width: 70%;
+    height: 300px;
+    max-width: 400px;
+    position: relative;
+    margin: 10px auto;
+  }
+  div.pokeball div {
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+  }
+  div.pokeball span {
+    display: block;
+  }
+  div.pokeball span:nth-child(1) {
+    width: 200px;
+    height: 100px;
+    background: #d25b70;
+    border-radius: 100px 100px 0px 0px;
+  }
+  div.pokeball span:nth-child(2) {
+    top: 90px;
+    width: 200px;
+    height: 20px;
+    position: absolute;
+    z-index:1;
+    background: #6cb3A9;
+  }
+  div.pokeball span:nth-child(3) {
+    width: 200px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 0px 0px 100px 100px;
+  }
+  div.pokeball span:nth-child(4) {
+    top: 90px;
+    width: 180px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index:1;
+    background: #781728;
+  }
+  div.pokeball span:nth-child(5) {
+    top: 65px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index:1;
+    background: #781728;
+    border-radius: 80px 80px 80px 80px;
+  }
+  div.pokeball span:nth-child(6) {
+    top: 75px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index:1;
+    background: #f6df96;
+    border-radius: 80px 80px 80px 80px;
+  }
+/*↑pokeball*/
+
+
+  div.cheese {
+    background: #2DC19F;
+    width: 70%;
+    height: 300px;
+    max-width: 400px;
+    position: relative;
+    margin: 10px auto;
+  }
+  div.cheese div {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 250px;
+    height: 200px;
+    transform: translate(-50%,-50%);
+    transform: scale(1.5);
+  }
+  div.cheese span{
+    position: absolute;
+    display:block;
+    z-index: 2;
+  }
+  div.cheese span:nth-child(1){
+   	background: linear-gradient(to top right,transparent 50%,#F8CF80 50%) no-repeat top left / 100% 50%;
+    transform: rotate(-20deg);
+    width: 100px;
+    height: 100px;
+    top: 0.25px;
+  }
+  div.cheese span:nth-child(2){
+    top: 0.5px;
+    left:-14px;
+   	background: linear-gradient(6.5deg,transparent 50%,#F3AC3C 50%) no-repeat bottom left/100% 50%;
+    width: 111px;
+    height: 100px;
+  }
+  div.cheese span:nth-child(3){
+    top: -48.5px;
+    left:-14px;
+   	background: linear-gradient(6.5deg,#F3AC3C 50%,transparent 50%) no-repeat bottom left/100% 50%;
+    width: 111px;
+    height: 100px;
+  }
+  div.cheese span:nth-child(4){
+   	background:#2DC19F;
+    width: 20px;
+    height: 20px;
+    border-radius:20px;
+  }
+  div.cheese span:nth-child(5){
+   	background:#998235;
+    width: 14px;
+    height: 10px;
+    border-radius:14px/10px;
+    left:60px;
+    top: 1px;
+  }
+  div.cheese span:nth-child(6){
+    top: 10px;
+   	background:#2DC19F;
+    width: 15px;
+    height: 15px;
+    border-radius:20px;
+    left:85px;
+  }
+  div.cheese span:nth-child(7){
+    top: 33px;
+   	background:#2DC19F;
+    width: 13px;
+    height: 13px;
+    border-radius:20px;
+    left:-20px;
+  }
+  div.cheese span:nth-child(8){
+    top: 40px;
+   	background:#998235;
+    width: 15px;
+    height: 15px;
+    border-radius:20px;
+    left:75px;
+  }
+  div.cheese span:nth-child(9){
+    top: 68px;
+   	background:#2DC19F;
+    width: 15px;
+    height: 15px;
+    border-radius:20px;
+    left:10px;
+  }
+  div.cheese span:nth-child(10){
+    top: 42px;
+   	background:#998235;
+    width: 15px;
+    height: 15px;
+    border-radius:20px;
+    left:5px;
+  }
+  div.cheese span:nth-child(11){
+    top: 70px;
+   	background:#2DC19F;
+    width: 16px;
+    height: 16px;
+    border-radius:20px;
+    left:60px;
+  }
+  div.cheese span:nth-child(12){
+    top: 55px;
+   	background:#998235;
+    width: 10px;
+    height: 10px;
+    border-radius:20px;
+    left:35px;
+  }
+  div.cheese span:nth-child(13){
+    top: 35px;
+   	background:#998235;
+    width: 8px;
+    height: 8px;
+    border-radius:20px;
+    left:50px;
+  }
+  div.cheese span:nth-child(14){
+    top: 13px;
+   	background:#998235;
+    width: 11px;
+    height: 8px;
+    border-radius:11px / 8px;
+    left:33px;
+  }
+  
+
+/*↑cheese*/
