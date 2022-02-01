@@ -53,11 +53,10 @@ div.snowman span:nth-child(5){
     border-radius: 60px 60px 60px 60px;
 }
 div.snowman span:nth-child(6){
-    top: 84px;
+    top: 88px;
     background: #ffa63f;
     width: 60px;
     height: 10px;
-    border: 4px solid #ac474b;
     border-radius: 60px;
     z-index:2;
 }
@@ -84,8 +83,7 @@ div.snowman span:nth-child(9){
     z-index: 1;
     background: #ac474b;
     width: 70px;
-    height: 10px;
-    border: 4px solid #ac474b;
+    height: 18px;
 }
 
 /*↑snowmam*/
@@ -150,6 +148,6 @@ div.snowman span:nth-child(9){
     background: #14313e;
     border-radius: 60px / 30px ;
   }
-  
+
   /*↑candle*/
 
